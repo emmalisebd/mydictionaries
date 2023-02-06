@@ -207,15 +207,17 @@ ProduceDictionary = {
     }
 }
 
+#my code
 for key in ProduceDictionary:
-    # calculated = ProduceDictionary[key]['cost'] * ProduceDictionary[key]['amt_sold']
-    if ProduceDictionary[key]['cost'] * ProduceDictionary[key]['amt_sold'] != ProduceDictionary[key]['total']:
-        print('Produce Name: ', ProduceDictionary[key], "\n")
-        print('Calculated Total: ', ProduceDictionary[key]['cost'] *
-              ProduceDictionary[key]['amt_sold'], "\n")
-        print('Stated Total: ', ProduceDictionary[key], ['total'], "\n")
+    calculated = round(ProduceDictionary[key]['cost'] * ProduceDictionary[key]['amt_sold'], 2)
+    if calculated != ProduceDictionary[key]['total']:
+        print(f'Produce Name: {ProduceDictionary[key]}')
+        print(f'Calculated Total: {calculated}')
+        print(f'Stated Total: ', ProduceDictionary[key], ['total'], "\n")
 
 
+#in class code
+'''
 for produce in ProduceDictionary:
     cost = ProduceDictionary[produce]['cost']
     amt_sold = ProduceDictionary[produce]['amt_sold']
@@ -227,3 +229,4 @@ for produce in ProduceDictionary:
         print(f"Stated Total: ${stated_total:,.2f}")
         print()
         print()
+'''
