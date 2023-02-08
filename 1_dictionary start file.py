@@ -1,7 +1,7 @@
 import random
 
 # dictionary requires a key and returns a value
-# first way ot create dictionary
+# first way to create dictionary
 phonebook = {}  # creates empty dictionary
 
 # second way to create dictionary           #lists use square brackets
@@ -89,7 +89,7 @@ for key in phonebook:
     # must call dictionary and provide key to get the phone number
     print(f" The key is {key} and the value is {phonebook[key]}")
 
-for value in phonebook.values():        # .values method itertes just the values side (right side)
+for value in phonebook.values():        # .values method iterates just the values side (right side)
     print(value)
 
 # if you don't split it using the .items method, it will return a tuple which you cannot edit
