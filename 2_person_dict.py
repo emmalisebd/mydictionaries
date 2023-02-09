@@ -19,7 +19,10 @@ print(person['pets']['cat'])
 for name in person['children']:
     print(name)
 
+
 # print out the pets in this format:
 # type of pet: dog name of pet: Fido
-for pet in person['pets']:
-    print(person['pets'][pet])  # add format
+# for pet in ['pets']:
+#     name = person['pets']
+    for k, v in person['pets'].items():
+        print(f"type of pet:{k} name of pet: {v}")

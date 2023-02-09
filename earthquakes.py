@@ -47,12 +47,21 @@ print(len((eqs)['features']))
 # dictionary, name it 'eq_dict'. We are only interested in earthquakes that have a
 # magnitude > 6. Print out the new dictionary.
 
+
 eq_dict = {}
 
 for ext in eqs['features']:
-    if ext['properties']['mag'] > 6:  # how to incorporate coordinates?
-        eq_dict['features'] = ext[
-            'properties']['place']['mag']['goemetry']['coordinates'][0]['coordinates'][1]
-print(eq_dict[ext])
+    location = ext['properties']['place']
+    magnitude = ext['properties']['mag']
+    longitude = ext['geometry']['coordinates'][0]
+    latitude = ext['geometry']['coordinates'][1]
+    if magnitude > 6:
+        eq_dict[location] = {'Magnitude': magnitude,
+                             'Longitude': longitude, 'Latitude': latitude}
 
-# print(ext['place', 'mag', 'coorinates'])
+
+for key, value in eq_dict.items():
+    print("Location:", key)
+    print("Magnitude:", value['Magnitude'])
+    print("Longitude:", value['Longitude'])
+    print("Latitude:", value['Latitude'], '\n')
