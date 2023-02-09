@@ -64,4 +64,4 @@ for key, value in eq_dict.items():
     print("Location:", key)
     print("Magnitude:", value['Magnitude'])
     print("Longitude:", value['Longitude'])
-    print("Latitude:", value['Latitude'], '\n')
+    print("Latitude:", value['Latitude'])
