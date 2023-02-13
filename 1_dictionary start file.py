@@ -39,6 +39,13 @@ else:
     # Chris's number will be returned
     print(f"{name} is not in the phonebook")
 
+# to just extract values as a list
+my_list = []
+
+for i in phonebook.values():
+    my_list.append(i)
+print(my_list)
+
 # phone = phonebook["chris"]
 # print(phone)
 
@@ -85,17 +92,17 @@ print()
 print('*****  start section 5 - iterate through keys, values, items ********')
 print()
 
-for key in phonebook:
+for i in phonebook:
     # must call dictionary and provide key to get the phone number
-    print(f" The key is {key} and the value is {phonebook[key]}")
+    print(f" The key is {i} and the value is {phonebook[i]}")
 
-for value in phonebook.values():        # .values method iterates just the values side (right side)
-    print(value)
+for x in phonebook.values():        # .values method iterates just the values side (right side)
+    print(x)
 
 # if you don't split it using the .items method, it will return a tuple which you cannot edit
-for key, value in phonebook.items():
+for a, b in phonebook.items():
     # don't need to call phonebook bc the .items method already does
-    print(f"The key is {key} and the value is {value}")
+    print(f"The key is {a} and the value is {b}")
 
 for ph_tuple in phonebook.items():
     print(ph_tuple)
@@ -109,11 +116,11 @@ print()
 print('*****  start section 6 - using get and clear ********')
 print()
 
-phone = phonebook.get('Chris', '999')  # default of 999 if "Chris" isn't found
+phone = phonebook.get('Katie', '999')  # default of 999 if "Chris" isn't found
 print(phone)
 
-phonebook.clear()
-print(phonebook)  # creates an empty dictionary but does not delete data
+# phonebook.clear()
+# print(phonebook)  # creates an empty dictionary but does not delete data
 
 
 print()
@@ -141,9 +148,8 @@ print()
 print('*****  start section 8 - using popitem ********')
 print()
 
-a = phonebook.popitem()
-print(a)  # Joanne gets deleted every time
-print(phonebook)
+x = phonebook.popitem()  # Joanne gets deleted every time
+print(x)
 
 
 print()
@@ -155,7 +161,7 @@ print()
 print('*****  start section 9 - using random and converting to list ********')
 print()
 
-phonebook_list = list(phonebook)
+phonebook_list = list(phonebook)  # turns dictionary into list
 print(phonebook_list)
 # random.choice only works for lists
 random_key = random.choice(phonebook_list)
